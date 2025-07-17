@@ -81,3 +81,5 @@ Here is a step by step of how to run the webapp on a unix (bash) terminal.
     * You can download the plot using the camera icon above the plot.
 5. Once done, close the app from the terminal by pressing Ctrl+C.
 
+
+Please contact me at arunjoseph.work@gmail.com in case of any queries or feedbacks. Thank you.
