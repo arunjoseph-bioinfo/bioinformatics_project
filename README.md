@@ -10,9 +10,9 @@ The purpose of this mini web application is to do differential expression analys
 Here is a step by step of how to run the webapp on a unix (bash) terminal.
 1. Pull the app folder from git hub : 
     * Ensure git is enabled. Check using:
-        ''' bash
+        ``` bash
         git --version
-        '''
+        ```
     * Clone the repository: 
         git clone https://github.com/arunjoseph-bioinfo/bioinformatics_project.git
     * Navigate to the project directory: 
