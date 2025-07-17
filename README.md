@@ -14,31 +14,50 @@ Here is a step by step of how to run the webapp on a unix (bash) terminal.
         git --version
         ```
     * Clone the repository: 
+        ```bash
         git clone https://github.com/arunjoseph-bioinfo/bioinformatics_project.git
+        ```
     * Navigate to the project directory: 
+        ```bash
         cd bioinformatics_project/mini_app
+        ```
 2. Install required dependencies using conda environment file 
     * Ensure conda is intalled (I am using miniconda : https://www.anaconda.com/docs/getting-started/miniconda/install#linux)
     * Install the dependencies using the environment file: 
+        ```bash
         conda env create -f environment.yml
+        ```
     * Once installed, activate the environment using conda: 
+        ```bash
         conda activate mini-app-env
+        ```
 3. Installing DESeq2 on R (skip if already installed):
     * Ensure that R is installed on your bash system. Check using:
+        ```bash
         R --version
-    * Launch R by typing R on the commandline
+        ```
+    * Launch R by typing R on the commandline:
+        ```bash
+        R
+        ```
     * In the R console:
+        ```R
         if (!requireNamespace("BiocManager", quietly = TRUE))
             install.packages("BiocManager")
 
         BiocManager::install("DESeq2")
+        ```
     * If promt ask you to select server, select the appropriate server.
 4. Once everything is successful, run the web app:
     * On the bash commandline, run the app:
-        'python app.py'
+        ```bash
+        python app.py
+        ```
     * In the pop-up, open the app on browser, or open the following link on your computer. 
         http://127.0.0.1:6688/
 5. The app should be running now.
+
+## The app
 
 ![alt text](image.png)
 
@@ -47,6 +66,9 @@ Here is a step by step of how to run the webapp on a unix (bash) terminal.
     * The app expects gene count tables with column one being gene names and following columns represent the samples. If your format is any different, it may not work.
     * The gene counts must be integers. If the file contains decimals, the app will not work (DESeq2 expects counts. If normalised (e.g., using log or TPM), make them into whole numbers before running the app)
     * Uploading any files other than '.csv' or '.xlsx' will raise an error.
+    * You can use the sample files provided in the directory to test the app.
+        "gene_count_data.csv"
+        "gene_counts.csv"
 2. Once the file is properly uploaded, you will see the sample names in one column and condition in another column. It contains a dropdown option, which lets you choose controls and treatments. 
     * Select atleast one control and two treatments for comparison.
     * Only the selected samples will be compared in the differential expression analysis.
