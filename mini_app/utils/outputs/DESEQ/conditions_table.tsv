@@ -1,4 +1,5 @@
 Samples	Conditions
-PC-1	Control
-PC-2	Control
-PC-3	Treatment
+counts_S93	Control
+counts_S94	Control
+counts_S107	Treatment
+counts_S108	Treatment
