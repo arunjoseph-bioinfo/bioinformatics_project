@@ -1,5 +1,5 @@
 Samples	Conditions
-counts_S93	Control
-counts_S94	Control
-counts_S107	Treatment
-counts_S108	Treatment
+Sample1	Control
+Sample2	Control
+Sample3	Treatment
+Sample4	Treatment
