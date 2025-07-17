@@ -31,9 +31,19 @@ logo_container = html.Div(
 
 default_note_string = 'This app takes input in the form of gene-counts table output generated as a result of aligning sequencing reads to a reference, and various data analysis processes. Outputs a gene counts table and volcano plot to visualise the data.'
 
+# To giver error alert
+error_alert = dbc.Alert(
+        id="upload-error-alert",
+        is_open=False,
+        dismissable=True,
+        color="danger",
+        style={'margin-top': '10px'}
+    )
+
 # Create an instance of the upload card
 file_upload = upload_card('Upload the gene count file (Required)', 'upload-data')
 
+# Navbar with logo and title
 navbar = dbc.Navbar(
             dbc.Container(
                 [
@@ -159,6 +169,7 @@ app.layout = html.Div(
         dbc.Row(
             [
                 file_upload,
+                error_alert,
                 dbc.Col(
                     dbc.Row([
                         dbc.Col(
